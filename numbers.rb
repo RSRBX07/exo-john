@@ -7,6 +7,12 @@ age= 54*364*24*360
 print "afficher votre age en seconde  age:#{age}"
 now='Time.now'
 birthTime = Time.new "21/11/1962"
-agesecond = now - birthTime
+#agesecond = now - birthTime
 
+#origin de Time
+sec_in_year=60*60*24*365
+origin= Time.new 0
+right_now = Time.now
+ x = now / sec_in_year
 
+ 
