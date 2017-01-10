@@ -19,7 +19,11 @@ else
 
 #afficher si gagne ou perdu
 puts " entrer 5 chiffres"
+available_balls  = (1..5).to_a#shuffle balls and take 5
+picked_balls = available_balls.shuffle.take 5
+if trois nombres gagnant affiche gagne? = true
+    else affiche perdu = false
+        end
 
-puts " afficher si gagne ou perdu"
-if m.score>m.score
-    met"m"
+        
+

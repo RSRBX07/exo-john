@@ -15,8 +15,6 @@ name = "pierre"
 "pierre".lenght
 name.reverse!
 full_name = "toto
-self.puts ["coucou"]
-
 
 
 
