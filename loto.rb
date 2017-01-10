@@ -1,3 +1,6 @@
+#demander une grille de jeu
+puts "demander une grille de jeu"
+
 # affichage du montant de la cagnotte
 #entre 100 et 500
 # le vendredi 13, la cagnotte est de 2 millions
@@ -13,3 +16,10 @@ else
 
  puts " le tirage du jour est : #{picked_balls.sort}"
 
+
+#afficher si gagne ou perdu
+puts " entrer 5 chiffres"
+
+puts " afficher si gagne ou perdu"
+if m.score>m.score
+    met"m"

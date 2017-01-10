@@ -17,9 +17,4 @@ Allongeons la jambe, la jambe
 Car la route est longue 
 =end
 
-puts " Ma poule n'a plus qu'vingt-neuf poussins"
-p= (29 poussins)
-p = (29 + 1 poussins)
-puts = "allongeons la jambe"
-
-
+#poussins -= 1
