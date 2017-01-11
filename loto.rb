@@ -13,7 +13,7 @@ end
 
 #valider la grille
 
-puts " entrer 5 chiffres? "
+puts " génération de votre grille? "
 
 
 available_balls  = (1..45).to_a
@@ -22,7 +22,7 @@ puts "afficher le ticketloto"
 
 
 #tirage aleatoire de 5 nbres
- puts "le montant de la cagnotte du jour est de #{cagnote}"
+ puts "le montant de la cagnotte du jour est de #{cagnotte}"
  available_balls = (1..45).to_a#shuffle balls and take 5
  picked_balls = available_balls.shuffle.take 5
 
@@ -30,6 +30,6 @@ puts "afficher le ticketloto"
 
 
 #afficher si gagne ou perdu
-if trois nombres gagnant affiche gagne? = true
-    else affiche perdu = false
-        end
+# if trois nombres gagnant affiche gagne? = true
+#     else affiche perdu = false
+#         end
