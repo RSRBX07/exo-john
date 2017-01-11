@@ -28,8 +28,11 @@ puts "afficher le  #{ticketloto.sort}"
 
  puts " le tirage du jour est : #{picked_balls.sort}"        
 
+#comparer la grille et le tirage
+   
+
 
 #afficher si gagne ou perdu
 # if trois nombres gagnant affiche gagne? = true
 #     else affiche perdu = false
-#         end
+#      
