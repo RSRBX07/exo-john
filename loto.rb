@@ -18,7 +18,7 @@ puts " génération de votre grille? "
 
 available_balls  = (1..45).to_a
 ticketloto = available_balls.shuffle.take 5 
-puts "afficher le ticketloto"
+puts "afficher le  #{ticketloto.sort}"
 
 
 #tirage aleatoire de 5 nbres
