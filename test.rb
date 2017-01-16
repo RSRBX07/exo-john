@@ -19,7 +19,7 @@ loto_du_lundi.validate_grid Loto.get_grid
 loto_du_lundi.check_grid(grid)
 
 #test de loto
-#require './loto.rb'
+# require './loto.rb'
 
 
 
