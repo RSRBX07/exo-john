@@ -33,6 +33,6 @@ puts "afficher le  #{ticketloto.sort}"
 
 
 #afficher si gagne ou perdu
-# if trois nombres gagnant affiche gagne? = true
-#     else affiche perdu = false
-#      
+ if trois nombres gagnant affiche gagne? = true
+  else affiche perdu = false
+   
