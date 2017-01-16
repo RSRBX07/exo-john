@@ -1,4 +1,5 @@
-
+class In_french_num
+  end
 
 def in_french_num     index
 
