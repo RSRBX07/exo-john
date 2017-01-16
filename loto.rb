@@ -20,10 +20,11 @@ def get_grid
         input = get to_i
         grid << input
     end
+end
 
 is_vendredi_13 = false
 
-
+if is_vendredi_13
     cagnotte = 2,000,000
 else
     cagnotte = 100,000
@@ -32,7 +33,9 @@ end
 #engistrere une grille pour le loto courrant
 
 def grid_validate grid
-    end
+    @saved_grids ||=[]     
+    @saved_grids push grid
+end
 
 #puts " génération de votre grille? "
 
@@ -42,7 +45,7 @@ def drow
 available_balls  = (1..45).to_a
 #shuffle balls and take 5
 picked_balls=available_balls.shuffle.take 5
-
+end
 
 #ticketloto = available_balls.shuffle.take 5 
 puts "afficher le  #{ticketloto.sort}"
@@ -53,13 +56,13 @@ puts "afficher le  #{ticketloto.sort}"
 # available_balls = (1..45).to_a#shuffle balls and take 5
  #picked_balls = available_balls.shuffle.take 5
 
- puts " le tirage du jour est : #{picked_balls.sort}"        
+# puts " le tirage du jour est : #{picked_balls.sort}"        
 
 #comparer la grille et le tirage
    
 
 
 #afficher si gagne ou perdu
- if trois nombres gagnant affiche gagne? = true
-  else affiche perdu = false
-      end
+# if trois nombres gagnant affiche gagne? = true
+ #else affiche perdu = false
+ #end

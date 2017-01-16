@@ -8,6 +8,8 @@ puts my_dice.roll
 puts "lancer de de pipe"
 puts my_dice.roll 4
 
+require './loto.rb'
+
 loto_du samedi = loto.new
 2.times{loto_du_samedi.validate_grid loto.get_grid}
 
@@ -17,7 +19,7 @@ loto_du_lundi.validate_grid Loto.get_grid
 loto_du_lundi.check_grid(grid)
 
 #test de loto
-require './loto.rb'
+#require './loto.rb'
 
 
 
