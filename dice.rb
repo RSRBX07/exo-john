@@ -1,62 +1,74 @@
-#def roll
-   # puts "lancer un dés"
-   # return rand 6 
-    #end
+require 'date'
+class Loto
 
-# def roll_sheated cheated_value 
-#     cheated_value = 5
-#     return cheated_value
-    
-#     end
-# puts roll_sheated 5
-
-def roll(cheated_value= nil)
-
-    if cheated_value
-        return cheated_value
-    else 
-        return 1 + rand(6)
+  def self.get_grid
+    grid = []
+    5.times do
+      input = gets.to_i
+      grid << input
     end
+    grid
+  end
 
- end
+  def self.get_flash
+    (1..45).to_a.shuffle.take 5
+  end
 
-# faces = [1,2,3,4,5,6]
-# roll = rand 1 + 6
-
-# roll = faces.shuffle
-# face_index = roll
-# roll = faces [face_index]
-puts"j1"
-puts roll
-puts"j2"
-puts roll 6
-puts "j1"
-puts roll
-puts"j2"
-puts roll 6
-puts"j1"
-puts roll
-puts"j2"
-puts roll 6
-puts "j1"
-puts roll
-puts"j2"
-puts roll 6
-
-class Dice
-
-    def self.count
-
+  def has_winner?
+    #comprer tous les bulletins valides avec la grille gagnante
+    sorted_draw = draw.sort
+    @saved_grids.each do |grid|
+      sorted_grid = grid.sort
+      return true if sorted_grid == sorted_draw
     end
-        #roll est une methode d'instance de Dice'
-    def roll(cheated_value= nil)
-        puts "dans la définition d'une méthode d'instance, self représente
-        #{self.inspect}"
-        cheated_value
-    end
+    return false
+  end
 
+  # enregistre une grille
+  # pour le loto courant
+  def validate_grid grid
+    # @saved_grids ||= []
+    @saved_grids = @saved_grids || []
+    @saved_grids.push grid
+  end 
+  # demander une grille de jeu
+
+  # affichage du montant de la cagnote
+  # entre 100 et 500.000 Euros
+  # le vendredi 13, la cagnote est de 2 millions
+  def vendredi_13?
+    Date.today.day == 13 && Date.today.friday?
+  end
+
+  
+
+  def prize
+    cagnote = if vendredi_13?
+        2_000_000
+      else
+        100_000
+      end
+    puts "Le montant de la cagnote du jour est de #{cagnote}"
+    cagnote
+  end
+
+  def draw
+    available_balls = (1..45).to_a
+    # shuffle balls and take 5
+    # @picked_balls ||= available_balls.shuffle.take(5)
+    @picked_balls = @picked_balls || available_balls.shuffle.take 5
+
+    puts "Le tirage du jour est : #{@picked_balls.sort}" 
+    @picked_balls
+  end
+
+  def check_grid grid
+    # afficher si gagne ou perdu
+    if grid.sort == draw.sort
+      puts "You win !"
+    else
+      puts "You loose !"
+    end
+  end
+  
 end
-
-#put "lancer de de pipe"   
-
-
