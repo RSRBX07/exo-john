@@ -45,15 +45,18 @@ puts roll 6
 
 class Dice
 
-    def.self.count
+    def self.count
 
-        end
+    end
         #roll est une methode d'instance de Dice'
     def roll(cheated_value= nil)
         puts "dans la définition d'une méthode d'instance, self représente
         #{self.inspect}"
-   cheated_value
- end
+        cheated_value
+    end
+
+end
+
 #put "lancer de de pipe"   
 
 
