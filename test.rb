@@ -22,19 +22,19 @@
 #loto_du_lundi.validate_grid Loto.get_flash
 #loto_du_lundi.check_grid(grid)
 #if loto_du_lundi.has_winner?
-  puts "Someone win"
+  #puts "Someone win"
 #"else
  # puts "nobody win"
 #end
 
 #test de numbers
 
-require './french_numbers.rb'
-my_french_numbers = french_numbers.new
+#require './french_numbers.rb'
+#my_french_numbers = french_numbers.new
 
-puts "in_french_num  1:#{in_french_num1}"
-puts "puts in_french_num  6: #{in_french_num6}"
-puts"puts in_french_num  2: #{in_french_num2}"
+#puts "in_french_num  1:#{in_french_num1}"
+#puts "puts in_french_num  6: #{in_french_num6}"
+#puts"puts in_french_num  2: #{in_french_num2}"
 
-
+loto_du_samedi.prize
 

@@ -77,5 +77,15 @@ class Loto
       puts "You loose !"
     end
   end
-  
+
+  private
+
+    def prize
+    cagnote = if vendredi_13?
+        2_000_000
+      else
+        100_000
+      end
 end
+
+
