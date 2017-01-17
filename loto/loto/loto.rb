@@ -2,6 +2,10 @@
 class Loto
   attr_reader :picked_balls
   attr_writer :picked_balls
+  def initialize 
+      puts"on initialise une instance de loto"
+      picked_balls =[]
+  end
 
   def self.get_grid
     grid = []
@@ -9,11 +13,7 @@ class Loto
       input = gets.to_i
       grid << input
     end
-    grid
-    def initialize 
-      puts"on initialise une instance de loto"
-      @picked_balls =[]
-    end
+    grid  
   end
 
   def self.get_flash
@@ -58,7 +58,7 @@ class Loto
     available_balls = (1..45).to_a
     # shuffle balls and take 5
     # @picked_balls ||= available_balls.shuffle.take(5)
-    @picked_balls = @picked_balls ||= available_balls.shuffle.take(5)
+    @picked_balls = available_balls.shuffle.take(5)
     puts "Le tirage du jour est : #{@picked_balls.sort}" 
     @picked_balls
   end
