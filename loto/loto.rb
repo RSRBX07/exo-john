@@ -10,6 +10,10 @@ class Loto
       grid << input
     end
     grid
+    def initialize 
+      puts"on initialise une instance de loto"
+      @picked_balls =[]
+    end
   end
 
   def self.get_flash
