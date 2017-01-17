@@ -1,5 +1,7 @@
   require 'date'
 class Loto
+  attr_reader :picked_balls
+  attr_writer :picked_balls
 
   def self.get_grid
     grid = []
@@ -17,7 +19,7 @@ class Loto
   def has_winner?
     #comprer tous les bulletins valides avec la grille gagnante
     sorted_draw = draw.sort
-    @saved_grids.each do |grid|
+    @saved_grids.to_a.each do |grid|
       sorted_grid = grid.sort
       return true if sorted_grid == sorted_draw
     end
@@ -26,7 +28,7 @@ class Loto
 
       
   def game_closed?
-    @picked_balls != []
+    @picked_balls.to_a.size == 5
   end
 
   # enregistre une grille
@@ -36,7 +38,7 @@ class Loto
     return false if game_closed?
       
     # @saved_grids ||= []
-    @saved_grids = @saved_grids || []
+    @saved_grids ||= []
     @saved_grids.push grid
   end 
   # demander une grille de jeu
@@ -46,18 +48,6 @@ class Loto
   # le vendredi 13, la cagnote est de 2 millions
   def vendredi_13?
     Date.today.day == 13 && Date.today.friday?
-  end
-
-  
-
-  def prize
-    cagnote = if vendredi_13?
-        2_000_000
-      else
-        100_000
-      end
-    puts "Le montant de la cagnote du jour est de #{cagnote}"
-    cagnote
   end
 
   def draw
@@ -80,12 +70,11 @@ class Loto
 
   private
 
-    def prize
-    cagnote = if vendredi_13?
-        2_000_000
-      else
-        100_000
-      end
+  def prize
+    if vendredi_13?
+      2_000_000
+    else
+      100_000
+    end
+  end
 end
-
-
