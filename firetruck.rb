@@ -1,0 +1,2 @@
+class Firetruck < vehicle
+  def: 

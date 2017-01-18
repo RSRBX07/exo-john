@@ -1,13 +1,26 @@
-class Plane
-  attr_reader :flying_state
-  def take_off
-        
-  end
-  def land
-    end
+require_relative './vehicle'
 
-   def initialize
-     flying_state = false
+class Plane < Vehicle
+  attr_reader :flying
   
+  def initialize
+     @flying = false
+  end
+  
+  def flying?
+    @flying 
+  end
+  
+  def take_off
+     @flying = true    
+  end
+ 
+  def land
+       @flying = false
   end
 end
+
+b707 = Plane.new
+puts b707.flying
+puts b707.out_of_order
+
