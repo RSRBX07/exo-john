@@ -7,7 +7,8 @@ class Loto
       picked_balls =[]
   end
 
-  def self.get_grid
+  def self.get_flash
+    
     grid = []
     5.times do
       input = gets.to_i
