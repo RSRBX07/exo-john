@@ -1,8 +1,16 @@
+#require 'file'
+
+
+
+
 class Counter
-    attr_acccesor(counter)
-    def initialize
-      Counter = 0
+  def add_one
   end
+
+  def value
+    File.new"./tmp/counter.txt", "r"
+    p counter_file
+ end
 
 
 class Vehicle
@@ -25,7 +33,18 @@ class Vehicle
   def initialize
     @position = :Roubaix
     @out_of_order = false
+
+    Counter.new.add.one
   end
+
+  def selF.count
+      Counter.new.get
+  end
+
+
+
+
+
   def move
    puts "I am moving"
   end
