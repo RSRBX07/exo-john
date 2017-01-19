@@ -1,17 +1,21 @@
-#require 'file'
-
+# Classe compteur
 class Counter
+
+  def self.get_filename
+    dirname = File.join(File.dirname(__FILE__), '../tmp/')
+    dirname + 'counter.txt'
+  end
+
   def add_one
-    new_val = value + 1
-    File.open "./tmp/counter.txt", "w" do |counter_file|
-      counter_file.write new_val
+    @read_value = value + 1
+    File.open(Counter.get_filename, "w") do |counter_file|
+      counter_file.write @read_value
     end
   end
 
   def value
-    File.open "./tmp/counter.txt", "r" do |counter_file|
-      counter_file.each_line {|line| return line.to_i}
-      counter_file.write new_val
+    @read_value ||= File.open Counter.get_filename, "r" do |counter_file|
+      counter_file.each_line { |line| return line.to_i }
     end
   end
 end
@@ -20,35 +24,20 @@ class Vehicle
   attr_reader :position
   attr_reader :out_of_order
 
-  #return the number of existing objects 
-  #open irb
-  #>Vehicle.count
-  ##=>0
-  #> vehicle.new
-  #> vehicle.count
-  #1
-  def self.count
-  end
-
   def initialize
-    @position = :Roubaix
+    @position = "Roubaix"
     @out_of_order = false
-
     Counter.new.add_one
   end
 
-  def self.count
-      Counter.new.get
+  def move new_position
+    "I'm moving from #{@position} to #{new_position}"
   end
 
-  def move
-   puts "I am moving"
+  def self.count
+    # return the number of existing objects (in memory)
+    # open irb et :
+    Counter.new.value
   end
 
 end
-
-puts(porsche = Vehicle.new).inspect
-porsche.position
-puts porsche.inspect
-porsche.move
-puts porsche.inspect
