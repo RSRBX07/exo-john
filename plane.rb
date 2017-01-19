@@ -23,4 +23,4 @@ end
 b707 = Plane.new
 puts b707.flying
 puts b707.out_of_order
-
+ 
