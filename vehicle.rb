@@ -9,7 +9,7 @@ class Counter
   end
 
   def value
-    File.open"./tmp/counter.txt", "r"do |counter_file|
+    File.open "./tmp/counter.txt", "r" do |counter_file|
       counter_file.each_line {|line| return line.to_i}
       counter_file.write new_val
     end
