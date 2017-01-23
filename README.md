@@ -1,11 +1,24 @@
-# exo-john
+# README
 
-Set exercice d'initiation a Ruby
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-[![CircleCI](https://circleci.com/gh/RSRBX07/exo-john.svg?style=svg)](https://circleci.com/gh/RSRBX07/exo-john)
+Things you may want to cover:
 
-## Config requise
+* Ruby version
 
--Ruby > 2.0
--git
--Ms 
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
