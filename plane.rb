@@ -1,26 +1,24 @@
 require_relative './vehicle'
-
 class Plane < Vehicle
-  attr_reader :flying
-  
+
+  attr_reader :flying_state
+  attr_reader :flying_state
+
   def initialize
-     @flying = false
+    @flying_state = false
+    super
   end
-  
-  def flying?
-    @flying 
-  end
-  
+
   def take_off
-     @flying = true    
+    @flying_state = true
   end
- 
-  def land
-       @flying = false
+
+  def landing
+    @flying_state = false
   end
+
 end
 
-b707 = Plane.new
-puts b707.flying
-puts b707.out_of_order
 
+boeing = Plane.new
+puts Vehicle.count
