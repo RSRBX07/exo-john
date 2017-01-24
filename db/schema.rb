@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20170123154615) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "players"
+    t.string   "draw"
   end
 
 end
