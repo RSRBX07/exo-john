@@ -9,6 +9,8 @@
 #movies = Movie.create ([{name: 'Star Wars'},{name: 'pinochio'}, {name: 'Assassins'} ])
 #Character.create(name: 'Luke', movie: movies.first)
 
+
+
 Game.destroy_all
 Game.create [ {name: "Loto du lundi", description: "Le tirage est 12, 42, 11, 6 et 33", players: 2245985},
 {name: "Loto du mardi", description: "Le tirage est 12, 42, 11, 6 et 33", players: 2245985},
