@@ -12,10 +12,10 @@
 
 
 Game.destroy_all
-Game.create [ {name: "Loto du lundi", description: "Le tirage est 12, 42, 11, 6 et 33", players: 2245985},
-{name: "Loto du mardi", description: "Le tirage est 12, 42, 11, 6 et 33", players: 2245985},
-{name: "Loto du mercredi", description: "Le tirage est 12, 42, 11, 6 et 33", players: 2245985},
-{name: "Loto du jeudi", description: "Le tirage est 12, 42, 11, 6 et 33", players: 2245985},
-{name: "Loto du vendredi", description: "Le tirage est 12, 42, 11, 6 et 33", players: 2245985}
-
+Game.create [
+  {name: "Loto du lundi", description: "Le tirage est 12, 42, 11, 6 et 33", players: 2245985},
+  {name: "Loto du mardi", description: "Le tirage est 12, 42, 11, 6 et 33", players: 2245985},
+  {name: "Loto du mercredi", description: "Le tirage est 12, 42, 11, 6 et 33", players: 2245985},
+  {name: "Loto du jeudi", description: "Le tirage est 12, 42, 11, 6 et 33", players: 2245985},
+  {name: "Loto du vendredi", description: "Le tirage est 12, 42, 11, 6 et 33", players: 2245985}
 ]
