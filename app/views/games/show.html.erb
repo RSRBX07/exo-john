@@ -10,6 +10,11 @@
   <%= @game.description %>
 </p>
 
+<p>There is currently <%= @game.draw%> players
+  <strong>Description:</strong>
+  <%= @game.draw %>
+</p>
+
 
 
 <%= link_to 'Edit', edit_game_path(@game) %> |
