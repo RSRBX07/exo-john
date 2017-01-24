@@ -1,4 +1,5 @@
 print"hello"
+a href="./say/hello.html.erb">Bye !!</a>
 puts "bonjour jean robert"
 puts"comment vas tu ?"
 puts"quel est votre nom"
