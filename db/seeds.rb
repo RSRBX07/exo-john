@@ -17,5 +17,5 @@ Game.create [
   {name: "Loto du mardi", description: "Le tirage est 12, 42, 11, 6 et 33", players: 2245985, draw: '14,21,7,45,32'},
   {name: "Loto du mercredi", description: "Le tirage est 12, 42, 11, 6 et 33", players: 2245985, draw: '14,21,7,45,32'},
   {name: "Loto du jeudi", description: "Le tirage est 12, 42, 11, 6 et 33", players: 2245985, draw: '14,21,7,45,32'},
-  {name: "Loto du vendredi", description: "Le tirage est 12, 42, 11, 6 et 33", players: 2245985, draw: '14,21,7,45,32'},
+  {name: "Loto du vendredi", description: "Le tirage est 12, 42, 11, 6 et 33", players: 2245985, draw: '14,21,7,45,32'  },
 ]
