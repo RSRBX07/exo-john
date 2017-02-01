@@ -10,4 +10,8 @@ class Game < ApplicationRecord
      @players -= 1
   end
 
+  def self.second_page
+    self.offset 25
+  end
+
  end
